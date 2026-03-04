@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALPHA AI Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    // Polyfill for process to prevent bundler errors
+    window.process = window.process || { env: {} };
+  </script>
+  <style>
+    :root {
+      --primary-bg: #F4F7F9;
+      --secondary-bg: #E2E8F0;
+      --card-bg: #FFFFFF;
+      --border-color: #CBD5E1;
+      --text-primary: #0F172A;
+      --text-secondary: #64748B;
+      --accent-color: #0088FF;
+      --button-bg: #0088FF;
+      --success: #10B981;
+      --danger: #EF4444;
+      --warning: #F59E0B;
+    }
+
+    .dark {
+      --primary-bg: #070312;
+      --secondary-bg: #100821;
+      --card-bg: #0a051a;
+      --border-color: #321D5C;
+      --text-primary: #FFFFFF;
+      --text-secondary: #B3ADD1;
+      --accent-color: #00F2FF;
+      --button-bg: #00F2FF;
+      --success: #00FF9D;
+      --danger: #FF0055;
+      --warning: #FFCC00;
+    }
+
+    body {
+      background-color: var(--primary-bg);
+      color: var(--text-primary);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      overflow-x: hidden;
+      transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .glass {
+      background: var(--card-bg);
+      backdrop-filter: blur(15px);
+      border: 1px solid var(--border-color);
+    }
+
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--primary-bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent-color); border-radius: 10px; }
+
+    @keyframes pulse-cyan {
+      0% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 242, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0); }
+    }
+    .premium-pulse { animation: pulse-cyan 2s infinite; }
+  </style>
+  <script type="importmap">
+  {
+    "imports": {
+      "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+      "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+      "firebase/": "https://esm.sh/firebase@^12.9.0/",
+      "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+      "lucide-react": "https://esm.sh/lucide-react@^0.564.0",
+      "recharts": "https://esm.sh/recharts@^3.7.0",
+      "react/": "https://esm.sh/react@^19.2.4/",
+      "react": "https://esm.sh/react@^19.2.4",
+      "date-fns": "https://esm.sh/date-fns@^4.1.0"
+    }
+  }
+  </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

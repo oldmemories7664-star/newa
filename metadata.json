@@ -1,0 +1,8 @@
+{
+  "name": "AI Studio Pro",
+  "description": "Professional AI & Game Dev Studio with streaming Gemini AI, integrated Firebase backend, and premium features.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
